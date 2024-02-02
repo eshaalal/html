@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Click Example</title>
+<style>
+  #info {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<button id="clickMe" onclick="showInfo()">Click Me</button>
+
+<div id="info">
+  <p>This is the information I got after clicking on the button.</p>
+</div>
+
+<script>
+function showInfo() {
+  document.getElementById("clickMe").style.display = "none";
+  document.getElementById("info").style.display = "block";
+}
+</script>
+
+</body>
+</html>

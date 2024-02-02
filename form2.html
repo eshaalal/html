@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="registrationForm" action="#" method="POST" onsubmit="return validateForm()">
+  <label for="name">Name :</label><br>
+  <input type="text" id="name" name="name" required><br>
+  
+  <label for="registration_number">Registration Number:</label><br>
+  <input type="text" id="registration_number" name="registration_number" required><br>
+  
+  <label for="contact_number">Contact Number:</label><br>
+  <input type="tel" id="contact_number" name="contact_number" required><br>
+  
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" required><br>
+  
+  <label for="confirm_password">Confirm Password:</label><br>
+  <input type="password" id="confirm_password" name="confirm_password" required><br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+function validateForm() {
+  var name = document.getElementById("name").value;
+  var registrationNumber = document.getElementById("registration_number").value;
+  var contactNumber = document.getElementById("contact_number").value;
+  var password = document.getElementById("password").value;
+  var confirmPassword = document.getElementById("confirm_password").value;
+
+  if (name == "" || registrationNumber == "" || contactNumber == "" || password == "" || confirmPassword == "") {
+    alert("All fields must be filled out");
+    return false;
+  }
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match");
+    return false;
+  }
+
+  // You can add more validation rules as needed
+
+  return true;
+}
+</script>
+
+</body>
+</html>
