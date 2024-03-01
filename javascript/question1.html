@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Content Example</title>
+</head>
+<body>
+  <h1>Dynamic Content Example</h1>
+  <p id="myParagraph">This is some initial text.</p>
+  
+  <button onclick="changeText()">Change Text</button>
+
+  <script>
+    function changeText() {
+      var paragraph = document.getElementById("myParagraph");
+      paragraph.textContent = "This text has been changed dynamically!";
+    }
+  </script>
+</body>
+</html>

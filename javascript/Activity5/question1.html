@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Listener Example</title>
+  <style>
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<button id="myButton">Click me</button>
+<button id="addButton">Add Event Listener</button>
+<button id="removeButton">Remove Event Listener</button>
+
+<script>
+  var myButton = document.getElementById("myButton");
+
+  function clickHandler(event) {
+    console.log("Button clicked!");
+    console.log("Event:", event);
+  }
+
+  function addListener() {
+    myButton.addEventListener("click", clickHandler);
+    console.log("Event listener added.");
+  }
+
+  function removeListener() {
+    myButton.removeEventListener("click", clickHandler);
+    console.log("Event listener removed.");
+  }
+
+  document.getElementById("addButton").addEventListener("click", addListener);
+
+  document.getElementById("removeButton").addEventListener("click", removeListener);
+</script>
+
+</body>
+</html>

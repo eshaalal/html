@@ -1,0 +1,53 @@
+<html>
+<head>
+<style type="text/css">
+.imgStyle
+{
+width:100px;
+height:100px;
+border:3px solid grey;
+
+}
+</style>
+</head>
+
+<body>
+
+<img id="mainImage" style="border:3px solid grey" src="1.png" height="500px" width="540px"/>
+<br>
+
+<div id="divId" onclick="changeImageOnClick()" onmouseover = "f1()" onmouseout = "f2()">
+<img id="2" class="imgStyle" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Ft4.ftcdn.net%2Fjpg%2F03%2F86%2F82%2F73%2F360_F_386827376_uWOOhKGk6A4UVL5imUBt20Bh8cmODqzx.jpg&tbnid=tHPW49gI58VcXM&vet=12ahUKEwi70bz69c2EAxWkbWwGHZpaA9AQMygEegQIARB5..i&imgrefurl=https%3A%2F%2Fstock.adobe.com%2Fsearch%2Fimages%3Fk%3Dspace&docid=JLe4dKdGaZ9TGM&w=720&h=360&q=space%20pictures&ved=2ahUKEwi70bz69c2EAxWkbWwGHZpaA9AQMygEegQIARB5">
+<img id="3" class="imgStyle" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fglowing-spaceship-orbits-planet-starry-galaxy-generated-by-ai_188544-9655.jpg%3Fsize%3D626%26ext%3Djpg%26ga%3DGA1.1.98259409.1708992000%26semt%3Dsph&tbnid=j5HfKaV996sDbM&vet=12ahUKEwi70bz69c2EAxWkbWwGHZpaA9AQMygBegQIARBz..i&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fspace&docid=6_X7mFNebacvlM&w=626&h=358&q=space%20pictures&ved=2ahUKEwi70bz69c2EAxWkbWwGHZpaA9AQMygBegQIARBz">
+<img id="4" class="imgStyle" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fultra-detailed-nebula-abstract-wallpaper-4_1562-749.jpg&tbnid=lK1OpXGWCi-gsM&vet=12ahUKEwi70bz69c2EAxWkbWwGHZpaA9AQMygAegQIARBx..i&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fspace&docid=6_X7mFNebacvlM&w=626&h=417&q=space%20pictures&ved=2ahUKEwi70bz69c2EAxWkbWwGHZpaA9AQMygAegQIARBx">
+<img id="5" class="imgStyle" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fstarwalk.space%2Fgallery%2Fimages%2Fwhat-is-space%2F1920x1080.jpg&tbnid=tGChiWD_pHHQZM&vet=12ahUKEwi70bz69c2EAxWkbWwGHZpaA9AQMygDegQIARB3..i&imgrefurl=https%3A%2F%2Fstarwalk.space%2Fen%2Fnews%2Fwhat-is-space&docid=Fb5yYnY-vX6tnM&w=1920&h=1080&q=space%20pictures&ved=2ahUKEwi70bz69c2EAxWkbWwGHZpaA9AQMygDegQIARB3">
+<img id="6" class="imgStyle" src="https://www.google.com/imgres?imgurl=https%3A%2F%2Ft3.ftcdn.net%2Fjpg%2F06%2F33%2F00%2F42%2F360_F_633004264_b6ZuRQZYAsZIEYfWdY15EAOiaG4ZJIbn.jpg&tbnid=lSlPWXYqbkvDEM&vet=12ahUKEwi70bz69c2EAxWkbWwGHZpaA9AQMygGegQIARB-..i&imgrefurl=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3D%2522space%2Bbackground%2522&docid=k4zoqPQ1CO2G_M&w=637&h=360&q=space%20pictures&ved=2ahUKEwi70bz69c2EAxWkbWwGHZpaA9AQMygGegQIARB-">
+</div>
+
+<script type="text/javascript">
+
+function changeImageOnClick()
+{
+var x =event.target;
+if(x.tagName=="IMG")
+{
+a=x.getAttribute("src");
+document.getElementById("mainImage").setAttribute("src",a);
+}
+}
+function f1()
+{
+x=event.target;
+x.style.cursor = 'pointer';
+x.style.borderColor = 'red';
+}
+function f2()
+{
+x=event.target;
+x.style.borderColor = 'grey';
+}
+
+</script>
+
+</body>
+</html>

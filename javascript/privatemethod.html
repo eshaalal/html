@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            #firstName;
+            #lastName;
+            constructor(firstName,lastName){
+                this.#firstName=firstName;
+                this.#lastName=lastName;
+            }
+            getFullName(format=true){
+                return format?this.#firstLast():this.#lastFirst();
+            }
+            #firstLast(){
+                return `${this.#firstName} ${this.#lastName}`;
+            }
+            #lastFirst(){
+                return `${this.#lastName} ${this.#firstName}`;
+            }
+
+        }
+        let person=new Person("john","Doe");
+        document.write(person.getFullName());
+    </script>
+</body>
+</html>
