@@ -1,0 +1,37 @@
+<!-- Execute jquery related activity, working of content delievery network:
+1.apply jquery selector with name
+2.to manipulate their content and attributes
+3.update html elements
+4. provide a cdn link 
+5.to replace the local jquery file
+6.modify the code to use jquery from the cdn ensure functions  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery CDN Example</title>
+    <!-- Use jQuery from CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Task 1: Apply jQuery selector with name
+            $("[name='example']").text("New Text"); // Task 2: Manipulate text content
+            $("[name='example']").attr("data-custom", "new-value"); // Task 2: Manipulate attributes
+            $("[name='example']").html("<b>New HTML Content</b>"); // Task 3: Update HTML content
+            
+            // Additional Task: Apply click event to a button
+            $("#button1").click(function(){
+                alert("Button Clicked!");
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Element with name attribute for demonstration -->
+    <div name="example">Initial Content</div>
+
+    <!-- Additional Element: Button for demonstration -->
+    <button id="button1">Click me</button>
+</body>
+</html>

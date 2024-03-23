@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Conversion</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    // Create JSON object with nested objects
+    const participantsObject = {
+      "participants": [
+        {
+          "name": "John Doe",
+          "age": 25,
+          "address": "123 Main St",
+          "details": {
+            "occupation": "Engineer",
+            "email": "john@example.com"
+          }
+        },
+        {
+          "name": "Jane Smith",
+          "age": 30,
+          "address": "456 Elm St",
+          "details": {
+            "occupation": "Designer",
+            "email": "jane@example.com"
+          }
+        }
+      ]
+    };
+
+    // Stringify JSON object
+    const participantsJsonString = JSON.stringify(participantsObject);
+    document.getElementById('output').innerHTML += "<p>Stringified JSON object:</p><pre>" + participantsJsonString + "</pre>";
+
+    // Parse stringified JSON back to JavaScript object
+    const parsedParticipantsObject = JSON.parse(participantsJsonString);
+    document.getElementById('output').innerHTML += "<p>Parsed JavaScript object:</p><pre>" + JSON.stringify(parsedParticipantsObject, null, 2) + "</pre>";
+  </script>
+</body>
+</html>
